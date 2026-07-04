@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f3fed8e-a39e-4512-800e-daa59624aca7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pelanggan.`id` AS pelanggan_id,
+     pelanggan.`nmplgn` AS pelanggan_nmplgn,
+     pelanggan.`jenis` AS pelanggan_jenis,
+     pelanggan.`telepon` AS pelanggan_telepon,
+     pelanggan.`alamat` AS pelanggan_alamat
+FROM
+     `pelanggan` pelanggan]]>
+	</queryString>
+	<field name="pelanggan_id" class="java.lang.String"/>
+	<field name="pelanggan_nmplgn" class="java.lang.String"/>
+	<field name="pelanggan_jenis" class="java.lang.String"/>
+	<field name="pelanggan_telepon" class="java.lang.String"/>
+	<field name="pelanggan_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="2" width="100" height="20" uuid="dabd4b2d-7bef-4c3c-8145-f026185da398"/>
+				<text><![CDATA[ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="0" width="100" height="20" uuid="02ce7ba7-8e33-47ea-91d3-f9d304dbf822"/>
+				<text><![CDATA[Nama Pelanggan
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="2" width="100" height="20" uuid="aae9a433-ca58-4956-a06a-7bf53d8add93"/>
+				<text><![CDATA[Jenis Kelamin
+
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="15" width="100" height="20" uuid="b25eb553-42e2-4259-a50c-9a353a9b6642"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="15" width="100" height="20" uuid="a55b2edf-fc5b-4221-be75-147e45a47f5d"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_nmplgn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="15" width="100" height="20" uuid="0ef55b87-bd75-4b9b-8a19-ec00c16c5fd0"/>
+				<textFieldExpression><![CDATA[$F{pelanggan_jenis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
